@@ -1,4 +1,6 @@
 import customtkinter
+from PIL import Image
+from file_management import generate_path, _internal, assets_folder
 
 class AppTitle(customtkinter.CTkFrame):
     def __init__(self, *args,
@@ -9,11 +11,35 @@ class AppTitle(customtkinter.CTkFrame):
 
         self.grid_columnconfigure((0, 1), weight=1)
 
-        self.title = customtkinter.CTkLabel(self, text='Password Generator', font=title_font)
-        self.title.grid(row=0, column=0, padx=20, pady=20, sticky="ew", columnspan=2)
+        internal_folder = _internal()
+        file_name = 'logo.png'
+        if internal_folder:
+            src = generate_path(internal_folder.as_posix(), 'assets', file_name)
+        elif not internal_folder:
+            src = generate_path(assets_folder().as_posix(), file_name)
+        if src:
+            pil_src = Image.open(src)
+            pil_img = customtkinter.CTkImage(None, pil_src, (200, 200))
+        self.appLogo = customtkinter.CTkLabel(self, text='', image=pil_img)
+        self.appLogo.grid(row=0, column=0, padx=(20, 0), pady=(20, 0), sticky="ew")
+
+        self.title = customtkinter.CTkLabel(self, text='Password Generator', font=title_font, fg_color='transparent')
+        self.title.grid(row=0, column=1, padx=(20, 0), pady=(20, 0), sticky="ew")
 
         self.subTitle = customtkinter.CTkLabel(self, text='Generates passwords, duh', font=subtitle_font)
-        self.subTitle.grid(row=1, column=0, padx=20, pady=(0, 20), sticky="ew", columnspan=2)
+        self.subTitle.grid(row=1, column=1, padx=20, pady=(0, 0), sticky="ew")
+
+class Footer(customtkinter.CTkFrame):
+    def __init__(self, *args,
+                 font: customtkinter.CTkFont = None,
+                 **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.author = customtkinter.CTkLabel(self, text='Copyright (c) 2024 Stalot', font=font)
+        self.author.grid(row=0, column=0, padx=20, pady=(18, 0), sticky='w')
+
+        self.version = customtkinter.CTkLabel(self, text='0.0.1 beta', font=font)
+        self.version.grid(row=0, column=1, padx=20, pady=(18, 0), sticky='e')
 
 class Spinbox(customtkinter.CTkFrame):
     def __init__(self, *args,
@@ -162,9 +188,8 @@ class Display(customtkinter.CTkFrame):
                  font: None,
                  **kwargs):
         super().__init__(*args, **kwargs)
+
+        self.grid_columnconfigure((0, 1), weight=1)
     
         self.display = customtkinter.CTkEntry(self, height=40, font=font, placeholder_text='Your password')
-        self.display.grid(row=0, column=0, padx=20, pady=20, sticky="ew", columnspan=2)
-
-        self.button = customtkinter.CTkButton(self, height=40, text="Generate", font=font, command=command)
-        self.button.grid(row=0, column=1, padx=20, pady=20, sticky="ew", columnspan=2)
+        self.display.grid(row=0, column=0, padx=20, pady=20, sticky="ew")

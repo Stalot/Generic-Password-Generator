@@ -1,6 +1,6 @@
 import customtkinter
 from generate import gen
-from customElements import AppTitle, Spinbox, optionsFrame
+from customElements import AppTitle, Spinbox, optionsFrame, Footer
 from file_management import generate_path, _internal, assets_folder
 
 class App(customtkinter.CTk):
@@ -9,10 +9,11 @@ class App(customtkinter.CTk):
 
         title_font = customtkinter.CTkFont(family="Cascadia Code", size=80)
         default_font = customtkinter.CTkFont(family="Cascadia Code", size=24)
+        footer_font = customtkinter.CTkFont(family="Cascadia Code", size=16)
 
         self.title('Password Generator')
         self.geometry('1280x720')
-
+        self.minsize(1280, 720)
         internal_folder = _internal()
         file_name = 'logo.ico'
         if internal_folder:
@@ -42,7 +43,10 @@ class App(customtkinter.CTk):
         self.optionsFrame.grid(row=4, column=0, padx=20, pady=(0, 20), sticky='w', columnspan=2)
 
         self.button = customtkinter.CTkButton(self, height=40, text="Generate", font=default_font, command=self.generate_password)
-        self.button.grid(row=2, column=1, padx=20, pady=20, sticky="e", columnspan=2)
+        self.button.grid(row=2, column=1, pady=20, sticky="e")
+
+        self.footer = Footer(self, font=footer_font, fg_color='transparent')
+        self.footer.grid(row=10, column=0, pady=(0, 10), sticky="ew")
 
     def generate_password(self):
         try:
