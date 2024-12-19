@@ -1,3 +1,4 @@
 __pycache__/
 venv/
 export_config.json
+build test/

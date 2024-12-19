@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="640"
+   height="640"
+   viewBox="0 0 640 640"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   sodipodi:docname="logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     inkscape:zoom="0.49264169"
+     inkscape:cx="319.70497"
+     inkscape:cy="254.74904"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#000000;fill-rule:evenodd;stroke-width:20;stroke-dashoffset:112;paint-order:stroke fill markers"
+       id="path1"
+       r="300.42117"
+       cy="320"
+       cx="320" />
+    <path
+       id="path2"
+       style="fill:#ffffff;fill-rule:evenodd;stroke-width:26.6129;stroke-dashoffset:112;paint-order:stroke fill markers"
+       d="m 137.68481,341.88096 c -44.302803,44.30264 -44.302798,116.13158 1e-5,160.43422 44.30264,44.30281 116.13158,44.30281 160.43422,10e-6 36.6667,-36.67236 43.79651,-93.5406 17.31924,-138.13053 0,0 42.87943,-75.62425 80.51981,-80.51981 17.51713,-2.2783 62.76959,43.59903 62.76959,43.59903 0,0 14.32349,-29.58724 10.16507,-44.08222 -4.70919,-16.41482 -36.22573,-19.14876 -36.22574,-36.22573 10e-6,-9.18514 10.33648,-18.6611 19.48461,-19.48461 27.13708,-2.4429 94.47376,73.82853 94.47376,73.82853 0,0 6.80668,-37.66031 -0.15754,-54.40483 -10.29511,-24.75318 -56.86995,-30.0612 -56.86996,-56.86996 1e-5,-12.0323 25.52436,-13.49205 25.52436,-25.52436 0,-18.67844 -20.9445,-39.62294 -39.62294,-39.62294 -12.03231,0 -13.49206,25.52435 -25.52436,25.52436 -26.80876,-1e-5 -32.11678,-46.57484 -56.86996,-56.869959 -16.74452,-6.964224 -54.40483,-0.157543 -54.40483,-0.157543 0,0 76.27143,67.336682 73.82853,94.473762 -0.82351,9.14813 -10.29947,19.4846 -19.48461,19.48461 -17.07697,-1e-5 -19.81091,-31.51655 -36.22573,-36.22573 -14.49498,-4.15843 -44.08221,10.16506 -44.08221,10.16506 0,0 37.57589,36.95104 37.60345,56.77403 0.0592,42.59517 -74.52424,86.51537 -74.52424,86.51537 -44.58993,-26.47727 -101.45772,-19.347 -138.13053,17.31924 z m 39.55073,43.72049 c 21.30821,-21.30791 55.85521,-21.30791 77.16302,-10e-6 21.3079,21.30781 21.3079,55.85481 -1e-5,77.16302 -21.3082,21.30792 -55.85521,21.30792 -77.16302,1e-5 -21.30791,-21.30781 -21.30791,-55.85482 10e-6,-77.16302 z"
+       sodipodi:nodetypes="ccccscssscsssssscssscsccccccc" />
+  </g>
+</svg>

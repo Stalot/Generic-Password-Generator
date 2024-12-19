@@ -14,10 +14,11 @@ class App(customtkinter.CTk):
         self.geometry('1280x720')
 
         internal_folder = _internal()
+        file_name = 'logo.ico'
         if internal_folder:
-            ico = generate_path(internal_folder.as_posix(), 'assets', 'OED-logo.ico')
+            ico = generate_path(internal_folder.as_posix(), 'assets', file_name)
         elif not internal_folder:
-            ico = generate_path(assets_folder().as_posix(), 'OED-logo.ico')
+            ico = generate_path(assets_folder().as_posix(), file_name)
         if ico:
             self.iconbitmap(ico)
     
