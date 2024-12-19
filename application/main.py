@@ -1,6 +1,7 @@
 import customtkinter
 from generate import gen
 from customElements import AppTitle, Spinbox, optionsFrame
+from file_management import generate_path, _internal, assets_folder
 
 class App(customtkinter.CTk):
     def __init__(self):
@@ -10,8 +11,16 @@ class App(customtkinter.CTk):
         default_font = customtkinter.CTkFont(family="Cascadia Code", size=24)
 
         self.title('Password Generator')
-        #self.iconbitmap('assets/OED-logo.ico')
         self.geometry('1280x720')
+
+        internal_folder = _internal()
+        if internal_folder:
+            ico = generate_path(internal_folder.as_posix(), 'assets', 'OED-logo.ico')
+        elif not internal_folder:
+            ico = generate_path(assets_folder().as_posix(), 'OED-logo.ico')
+        if ico:
+            self.iconbitmap(ico)
+    
         self.grid_columnconfigure((0, 1), weight=1)
         customtkinter.set_appearance_mode('dark')
         customtkinter.set_default_color_theme('green')
